@@ -5,27 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&family=Caveat:wght@400..700&family=Karantina:wght@300;400;700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&family=Silkscreen:wght@400;700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-  <h1>
-    Contact <span>
-      Leul
-    </span>
-  </h1>
+ <br><br><br>
     <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+      <h1>
+        <center>
+          Contact the Developer
+        </center>
+       
+      </h1>
+      <div>
+ <i class="fa-solid fa-user"></i>
+        <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+      </div>
+      <div>
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" id="email" name="email" placeholder="Email" required><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+      </div>
+       <div>
+      <i class="fa-solid fa-message"></i>
+        <textarea id="message" name="message" placeholder="Message" required></textarea><br><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
-
-        <button type="submit">Send Message</button>
+       </div>
+       
+        <button type="submit">Send <i class="fa-solid fa-paper-plane"></i></button>
+        <div id="status"></div>
     </form>
 
-    <div id="status"></div>
+   
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js">
     </script>
