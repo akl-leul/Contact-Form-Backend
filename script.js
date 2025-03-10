@@ -15,4 +15,5 @@
         document.getElementById("status").innerHTML = "Failed to send message.";
       }
     );
+    emailjs.sendForm()
   });
