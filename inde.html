@@ -12,3 +12,44 @@
 </form>
 
 <div id="status"></div>
+
+<script>
+  (function () {
+    emailjs.init("dBrpWJNiNTlbK8g92"); // Your EmailJS API key
+  })();
+
+  // Handle the form submission
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Send the email
+    emailjs.sendForm("service_id", "template_id", this).then(
+      function (response) {
+        document.getElementById("status").innerHTML = "Message sent successfully!";
+      },
+      function (error) {
+        document.getElementById("status").innerHTML = "Failed to send message.";
+      }
+    );
+  });
+</script>
+<script>
+  (function () {
+    emailjs.init("dBrpWJNiNTlbK8g92"); // Your EmailJS API key
+  })();
+
+  // Handle the form submission
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Send the email
+    emailjs.sendForm("service_id", "template_id", this).then(
+      function (response) {
+        document.getElementById("status").innerHTML = "Message sent successfully!";
+      },
+      function (error) {
+        document.getElementById("status").innerHTML = "Failed to send message.";
+      }
+    );
+  });
+</script>
