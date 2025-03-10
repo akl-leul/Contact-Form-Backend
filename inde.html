@@ -1,55 +1,26 @@
-<form id="contact-form">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required><br><br>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required><br><br>
-
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" required></textarea><br><br>
-
-  <button type="submit">Send Message</button>
-</form>
-
-<div id="status"></div>
-
-<script>
-  (function () {
-    emailjs.init("dBrpWJNiNTlbK8g92"); // Your EmailJS API key
-  })();
-
-  // Handle the form submission
-  document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // Send the email
-    emailjs.sendForm("service_id", "template_id", this).then(
-      function (response) {
-        document.getElementById("status").innerHTML = "Message sent successfully!";
-      },
-      function (error) {
-        document.getElementById("status").innerHTML = "Failed to send message.";
-      }
-    );
-  });
-</script>
-<script>
-  (function () {
-    emailjs.init("dBrpWJNiNTlbK8g92"); // Your EmailJS API key
-  })();
-
-  // Handle the form submission
-  document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // Send the email
-    emailjs.sendForm("service_id", "template_id", this).then(
-      function (response) {
-        document.getElementById("status").innerHTML = "Message sent successfully!";
-      },
-      function (error) {
-        document.getElementById("status").innerHTML = "Failed to send message.";
-      }
-    );
-  });
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form id="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+  
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" required></textarea><br><br>
+  
+    <button type="submit">Send Message</button>
+  </form>
+  
+  <div id="status"></div>
+  <script src="script.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
+</body>
+</html>
