@@ -7,7 +7,7 @@
     event.preventDefault();
 
     // Send the email
-    emailjs.sendForm("service_oxja8li", "template_u290nuf", this).then(
+    emailjs.sendForm("service_oxja8li", "_ejs-test-maill-service_", this).then(
       function (response) {
         document.getElementById("status").innerHTML = "Message sent successfully!";
       },
